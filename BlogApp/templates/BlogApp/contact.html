@@ -1,0 +1,22 @@
+{% extends 'index.html' %}
+{% block content %}
+  <!-- contact form -->
+  <div class="ct">
+    <div class="c-1">
+      <h2 style="text-align: center;">Contact Us</h2>
+      <p>Please fill this form in a decent manner</p>
+    </div>
+    <div class="c-2">
+      <form method="POST" action="" >
+        {% csrf_token %}
+        <div class="cc">
+          <label for="name">{{cont.label}}</label>
+        {{cont}}
+      </div>    
+      <button class="btn">SUBMIT</button>
+    </div>
+  </form>
+  </div>
+  {% include 'footer.html' %} 
+{% endblock content %}
+  

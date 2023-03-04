@@ -1,0 +1,52 @@
+/*  home */
+.content {
+	display: block;
+	max-width: 960px;
+	margin: auto;
+}
+.content img {
+	width: 100%;
+}
+.article {
+	text-align: center;
+	padding-bottom: 25px;
+}
+/* contact */
+.c-1 p {
+	text-align: left;
+}
+/* detail */
+.detail-1 h2 {
+	text-align: center;
+	padding-bottom: 25px;
+}
+.detail-2 {
+	display: block;
+	max-width: 960px;
+	margin: auto;
+}
+.detail-3 img {
+	width: 100%;
+}
+
+/* about */
+.st {
+	text-align: justify;
+}
+
+.a2 {
+	display: block;
+}
+
+.team {
+	max-width: 100%;
+}
+
+footer {
+	display: block;
+	padding-bottom: 5px;
+}
+
+.icon {
+	text-align: center;
+}

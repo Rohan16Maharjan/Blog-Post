@@ -1,0 +1,56 @@
+{% extends 'index.html' %} {% block content %}
+<!-- Featured Article -->
+<div class="container">
+	<h2 class="article">Featured Articles</h2>
+
+	{% for homes in home %}
+
+	<div class="content">
+		<a href="{% url 'Detail' homes.id %}">
+			<img src="{{ homes.image.url }} " alt="logo" width="220px" />
+		</a>
+		<div class="para">
+			<h3><b> {{homes.title}} </b></h3>
+
+			<p>{{homes.writer}} | {{homes.created}}</p>
+			<div class="more">
+				<a href="{% url 'Detail' homes.id %}">
+					<p>READ MORE</p>
+				</a>
+			</div>
+		</div>
+	</div>
+
+	{% endfor %}
+</div>
+
+<!-- more -->
+<!-- <div class="more">
+	<a href="#">
+		<p>MORE STORIES</p>
+	</a>
+</div> -->
+
+<!-- also read -->
+<!-- <div class="detail-1">
+	<h2>People Also Read</h2>
+	<hr />
+	<div class="detail-2">
+		{% for homes in home %}
+
+		<div class="detail-3">
+			<a href="#">
+				<img src="" alt="logo" width="250px" />
+			</a>
+			<p><b> </b></p>
+			<p>By Elon Musk | 07 January</p>
+			<div class="more">
+				<a href="#">
+					<p>READ MORE</p>
+				</a>
+			</div>
+		</div>
+		{% endfor %}
+	</div>
+</div> -->
+{% include 'footer.html' %} {% endblock content %}
