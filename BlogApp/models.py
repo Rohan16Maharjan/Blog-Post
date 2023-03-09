@@ -6,7 +6,6 @@ class Home(models.Model):
   title = models.CharField(max_length=100)
   writer = models.CharField(max_length=100)
   describes =models.TextField(max_length=50000)
-  
   created = models.DateTimeField(auto_now_add=True)
   id = models.UUIDField(default=uuid.uuid4,editable=False,primary_key=True,unique=True)
   
