@@ -1,0 +1,46 @@
+{% extends 'index.html' %} {% block content %}
+
+<!-- detail -->
+<div class="detail">
+	<h1>{{h.t2}}</h1>
+
+	<p>By {{h.w2}} | {{h.created}}</p>
+	<a class="fb" href="#">
+		<i class="fab fa-facebook fa"></i>
+	</a>
+	<a class="tw" href="#"> <i class="fab fa-twitter fa"></i> </a><br />
+
+	<img src="{{ h.img2.url }}" alt="code" />
+
+	<p>{{h.d2}}</p>
+</div>
+{% include 'footer.html' %} {% endblock content %}
+
+<!-- also read -->
+<!-- <div class="detail-1">
+	<h2>People Also Read</h2>
+	<hr />
+	<div class="detail-2">
+		<div class="detail-3">
+			<a href="#">
+				<img src="img/1.png" alt="logo" width="250px" />
+			</a>
+			<p><b> Lorem ipsum dolor sit amet. </b></p>
+			<p>By Elon Musk | 07 January</p>
+		</div>
+		<div class="detail-3">
+			<a href="#">
+				<img src="img/2.png" alt="logo" width="250px" />
+			</a>
+			<p><b> Lorem ipsum dolor sit amet. </b></p>
+			<p>By Elon Musk | 07 January</p>
+		</div>
+		<div class="detail-3">
+			<a href="#">
+				<img src="img/3.png" alt="logo" width="250px" />
+			</a>
+			<p><b> Lorem ipsum dolor sit amet. </b></p>
+			<p>By Elon Musk | 07 January</p>
+		</div>
+	</div>
+</div> -->
