@@ -1,11 +1,12 @@
 from django.shortcuts import render, redirect
-from .models import Home as Home1, About as About1, Contact
+from .models import Home as Home1, About as About1, Contact,Home2
 from .forms import ContactForm
 
 # Create your views here.
 def Home(request):
     home = Home1.objects.all()
-    context = {"home": home}
+    home2 = Home2.objects.all()
+    context = {"home": home,'home2':home2}
     return render(request, "BlogApp/home.html", context)
 
 
@@ -15,8 +16,8 @@ def Detail(request, id):
     return render(request, "BlogApp/detail.html", context)
 
 def Detail1(request, id):
-    h = Home1.objects.get(id=id)
-    context = {"h": h}
+    h2 = Home2.objects.get(id=id)
+    context = {"h2": h2}
     return render(request, "BlogApp/detail1.html", context)
 
 

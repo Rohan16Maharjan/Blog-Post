@@ -7,7 +7,7 @@
 
 	<div class="content">
 		<a href="{% url 'Detail' homes.id %}">
-			<img src="{{ homes.image.url }} " alt="logo" width="220px" />
+			<img src="{{ homes.image.url }} " alt="logo" width="200px" />
 		</a>
 		<div class="para">
 			<h3><b> {{homes.title}} </b></h3>
@@ -36,14 +36,14 @@
 	<h2>People Also Read</h2>
 	<hr />
 	<div class="detail-2">
-		{% for h in home|slice:":3" %}
+		{% for h in home2|slice:":3" %}
 
 		<div class="detail-3">
 			<a href="{% url 'Detail1' h.id %}">
 				<img src="{{ h.img2.url }}" alt="logo" width="250px" />
 			</a>
 			<p><b>{{h.t2}} </b></p>
-			<p>{{h.w2}} | {{h.created}}</p>
+			<p>{{h.w2}} | {{h.created2}}</p>
 			<div class="more">
 				<a href="{% url 'Detail1' h.id %}">
 					<p>READ MORE</p>

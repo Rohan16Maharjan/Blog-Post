@@ -7,10 +7,6 @@ class Home(models.Model):
     title = models.CharField(max_length=100)
     writer = models.CharField(max_length=100)
     describes = models.TextField(max_length=50000)
-    img2 = models.ImageField(default="default.jpg", null=True, blank=True)
-    t2 = models.CharField(max_length=100, blank=True, null=True)
-    w2 = models.CharField(max_length=100, null=True, blank=True)
-    d2 = models.TextField(max_length=50000,null=True,blank=True)
     created = models.DateTimeField(auto_now_add=True)
     id = models.UUIDField(
         default=uuid.uuid4, editable=False, primary_key=True, unique=True
@@ -19,6 +15,17 @@ class Home(models.Model):
     def __str__(self):
         return self.title
 
+class Home2(models.Model):
+    img2 = models.ImageField(default="default.jpg", null=True, blank=True)
+    t2 = models.CharField(max_length=100, blank=True, null=True)
+    w2 = models.CharField(max_length=100, null=True, blank=True)
+    d2 = models.TextField(max_length=50000,null=True,blank=True)
+    created2 = models.DateTimeField(auto_now_add=True)
+    id = models.UUIDField(
+        default=uuid.uuid4, editable=False, primary_key=True, unique=True
+    )
+    def __str__(self):
+        return self.t2
 
 class About(models.Model):
     team_image = models.ImageField(default="default.jpg")
