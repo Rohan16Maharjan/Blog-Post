@@ -1,6 +1,9 @@
 from django.shortcuts import render, redirect
 from .models import Home as Home1, About as About1, Contact,Home2
 from .forms import ContactForm
+from django.conf import settings
+from django.core.mail import send_mail
+
 
 # Create your views here.
 def Home(request):
@@ -28,9 +31,19 @@ def About(request):
 
 
 def Contact(request):
+    
     cont = ContactForm()
     if request.method == "POST":
         cont = ContactForm(request.POST)
+        email = request.POST['email']#email taken from form
+        # print(email)
+        send_mail(
+            "Thank You!!",
+            "Thank You for sending us the feedback we will be connecting with you as soon as possible !!",
+            "usedforpractice123@gmail.com",#from
+            [email],#to
+            fail_silently=False,
+        )
         if cont.is_valid():
             cont.save()
             return redirect("Home")

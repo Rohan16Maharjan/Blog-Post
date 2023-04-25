@@ -50,3 +50,14 @@ footer {
 .icon {
 	text-align: center;
 }
+
+/* map */
+.map {
+	max-width: 100%;
+}
+table {
+	max-width: 50%;
+}
+td {
+	padding: 25px;
+}

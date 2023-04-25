@@ -6,7 +6,21 @@
 body {
 	font-family: 'Roboto', sans-serif;
 }
-
+.location h1 {
+	text-align: center;
+}
+#nepal {
+	color: red;
+	text-transform: uppercase;
+}
+table {
+	max-width: 860px;
+	margin: auto;
+}
+td {
+	padding: 50px;
+	vertical-align: top;
+}
 /* Home.html */
 /* Slogan */
 .slogan {
